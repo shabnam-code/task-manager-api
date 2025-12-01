@@ -2,7 +2,7 @@
 
 1. This is Full Stack project with React, Node.js, and MongoDB
    1. **Frontend**: [task-manager-ui](https://github.com/shabnam-code/task-manager-ui) created using React, Routes, Redux Thunk, Material UI.
-   2. **Backend**: created using node, express and mongodb
+   2. **Backend**: Current repo, created using node, express and mongodb
 2. **Functionality**
    1. **Normal User**: Can create and edit tasks.
    2. **Admin User**: Can create, edit, as well as delete tasks.
@@ -23,3 +23,32 @@
 - **GET /**: Retrieve tasks.
 - **PUT /:id**: Update a task.
 - **DELETE /:id**: Delete a task.
+
+---
+
+## Database Schema
+
+### Users Collection
+```json
+{
+  "_id": "ObjectId",
+  "name": "string",
+  "email": "string",
+  "password": "string",
+  "role": "string" // e.g., "admin" or "user"
+}
+```
+
+### Tasks Collection
+```json
+{
+  "_id": "ObjectId",
+  "title": "string",
+  "description": "string",
+  "status": "string",
+  "assignedTo": "ObjectId",
+  "createdAt": "Date",
+  "updatedAt": "Date"
+}
+```
+
